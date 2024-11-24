@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1024.0" prefWidth="1440.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.RegistrarController">
+    <stylesheets>
+        <URL value="@/css/register.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="back" layoutX="679.0" prefHeight="1024.0" prefWidth="762.0" stylesheets="@../css/register.css" />
+      <VBox id="formContainer" alignment="CENTER" prefHeight="1024.0" prefWidth="641.0" stylesheets="@../css/register.css">
+         <children>
+            <Label text="Registro">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label styleClass="simpleText" stylesheets="@/css/register.css" text="Bienvenido a la tienda favorita de tu máscota" />
+            <HBox id="namesContainer" prefHeight="102.0" prefWidth="570.0" stylesheets="@../css/register.css">
+               <children>
+                  <VBox prefHeight="68.0" prefWidth="570.0" styleClass="inputContainers" stylesheets="@../css/register.css">
+                     <children>
+                        <Label styleClass="descTextField" stylesheets="@../css/register.css" text="Nombre(s)" />
+                        <TextField fx:id="nombre" prefHeight="40.0" prefWidth="200.0" promptText="First Name" styleClass="textField" stylesheets="@../css/register.css" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="67.0" prefWidth="570.0" styleClass="inputContainers" stylesheets="@../css/register.css">
+                     <children>
+                        <Label styleClass="descTextField" stylesheets="@../css/register.css" text="Apellidos" />
+                        <TextField prefHeight="40.0" prefWidth="278.0" promptText="Last Name" styleClass="textField" stylesheets="@../css/register.css" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="90.0" prefWidth="570.0" styleClass="inputContainers" stylesheets="@../css/register.css">
+               <children>
+                  <Label styleClass="descTextField" stylesheets="@../css/register.css" text="Identificación" />
+                  <TextField fx:id="cedula" prefHeight="40.0" prefWidth="570.0" promptText="Cédula" styleClass="textField" stylesheets="@../css/register.css" />
+               </children>
+            </VBox>
+            <VBox prefHeight="96.0" prefWidth="570.0" styleClass="inputContainers" stylesheets="@../css/register.css">
+               <children>
+                  <Label styleClass="descTextField" stylesheets="@../css/register.css" text="Email" />
+                  <TextField fx:id="usuario" prefHeight="40.0" prefWidth="400.0" promptText="Escribe tu correo" styleClass="textField" stylesheets="@../css/register.css" />
+               </children>
+            </VBox>
+            <VBox prefHeight="90.0" prefWidth="570.0" styleClass="inputContainers" stylesheets="@../css/register.css">
+               <children>
+                  <Label styleClass="descTextField" stylesheets="@../css/register.css" text="Password" />
+                  <TextField fx:id="password" prefHeight="40.0" prefWidth="400.0" promptText="Escribe una contraseña" styleClass="textField" stylesheets="@../css/register.css" />
+               </children>
+            </VBox>
+            <Button fx:id="registerButton" onAction="#register" prefHeight="40.0" prefWidth="616.0" stylesheets="@../css/register.css" text="Registrarse" />
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="570.0" style="-fx-spacing: 5px;">
+               <children>
+                  <Label styleClass="simpleText" stylesheets="@../css/register.css" text="Al registrarte, estás aceptando nuestros" />
+                  <Label styleClass="boldLabel" stylesheets="@/css/register.css" text="Términos y Condiciones.">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label styleClass="simpleText" stylesheets="@../css/register.css" text="Si estás de acuerdo, ¡bienvenido!" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

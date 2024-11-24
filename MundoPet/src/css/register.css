@@ -1,0 +1,49 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#back{
+    -fx-background-image: url("../Imagenes/registercat.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.textField{
+    -fx-border-radius: 10px;
+    -fx-border-color: #E0E0E0;
+    -fx-background-radius: 10px;
+}
+
+.button{
+    -fx-border-radius: 10px;
+    -fx-background-color: #1E1E1E;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #FFFFFF;
+}
+
+#formContainer{
+    -fx-spacing: 15px;
+    -fx-padding: 0 0 0 20px;
+}
+
+.inputContainers{
+    -fx-spacing: 15px;
+}
+
+.simpleText{
+    -fx-font-size:16px;
+}
+
+.descTextField{
+    -fx-font-size:16px;
+    -fx-font-weight:bold;
+}
+
+#namesContainer{
+    -fx-spacing:15px;
+}

@@ -4,7 +4,6 @@
  */
 package mundopet;
 
-import Controladores.AutenticacionController;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -20,10 +19,11 @@ public class MundoPet extends Application {
     public void start(Stage primaryStage) {
         try {
             System.out.println("start does start");
-            System.out.println(getClass().getResource("/Vistas/FXMLDocument.fxml"));
+            System.out.println(getClass().getResource("/Vistas/LogIn.fxml"));
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/Vistas/Autenticacion.fxml"));
+                loader.setLocation(getClass().getResource("/Vistas/LogIn.fxml"));
 
+            System.out.println("it gets here");
           
             Pane ventana = (Pane) loader.load();
             

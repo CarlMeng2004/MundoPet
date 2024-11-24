@@ -20,22 +20,22 @@ public class Autenticacion {
     
     public Autenticacion(){
         leerArchivo();
-        System.out.println(list.get(0).nombre);
-        System.out.println(list.get(0).password);
     }
     
-    public boolean Logear(TextField username, TextField password){
-        String user = username.getText();
+    public boolean Logear(TextField usuario, TextField password){
+        leerArchivo();
+        String user = usuario.getText();
         String pw = password.getText();
         
         System.out.println("in login");
         
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).nombre.equals(user) && list.get(i).password.equals(pw)) {
+            if (list.get(i).usuario.equals(user) && list.get(i).password.equals(pw)) {
                 System.out.println("logeado");
                 usuarioLogeado = list.get(i);
                 return true;
-            } else if (list.get(i).nombre.equals(user) && !(list.get(i).password.equals(pw))){
+            } else if (list.get(i).usuario.equals(user) && !(list.get(i).password.equals(pw))){
+                System.out.println("wrong password");
                 usuarioLogeado = null;
                 return false;
             }
@@ -44,18 +44,22 @@ public class Autenticacion {
         return false;
     }
     
-    public void registerInFile(TextField username, TextField password) {
+    public void registrar(TextField usuario, TextField password, TextField nombre, TextField cedula) {
         FileWriter file = null;
         PrintWriter printw = null;
         try {
             file = new FileWriter("/Users/eliasvidal/Documents/Coding III/MundoPet/src/texts/usuarios.txt");
             printw = new PrintWriter(file);
             
+            Usuario u = new Usuario(usuario, password, nombre, cedula);
+            list.add(u);
             for (int i = 0; i < list.size(); i++) {
-                Usuario u = list.get(i);
-                printw.println(u.nombre);
-                printw.println(u.password);
+                printw.println(list.get(i).usuario);
+                printw.println(list.get(i).password);
+                printw.println(list.get(i).nombre);
+                printw.println(list.get(i).cedula);
             }
+            
         } catch (Exception e) {
             
         } finally {
@@ -85,11 +89,19 @@ public class Autenticacion {
             while ((linea = br.readLine()) != null) {
                     switch(i){
                     case 0:
-                        u.nombre = linea.trim();
+                        u.usuario = linea.trim();
                         i++;
                         break;
                     case 1:
                         u.password = linea.trim();
+                        i++;
+                        break;
+                    case 2:
+                        u.nombre = linea.trim();
+                        i++;
+                        break;
+                    case 3:
+                        u.cedula = linea.trim();
                         list.add(u);
                         u = new Usuario();
                         i=0;
@@ -97,7 +109,8 @@ public class Autenticacion {
                     }
             }
             System.out.println("Datos válidos cargados al archivo");
-            
+            System.out.println(list.get(0).usuario);
+            System.out.println(list.get(0).password);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(
                 null, "Información: \n"+e.getMessage(), 

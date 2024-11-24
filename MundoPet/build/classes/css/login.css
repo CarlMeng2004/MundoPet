@@ -1,0 +1,50 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#formContainer{
+    -fx-spacing: 15px;
+}
+
+#companyName{
+    -fx-font-size: 48px;
+    -fx-text-alignment: center;
+    -fx-font-weight:700;
+    -fx-text-fill:#2FD158;
+    -fx-padding:0 0 50px 0;   
+}
+
+.credentialsTexts{
+    -fx-font-size:24px;
+    -fx-text-alignment: center;
+    -fx-font-weight:700;
+}
+
+.simpleText{
+    -fx-font-size:16px;
+}
+
+#termsAndConditions{
+    -fx-font-weight:bold;
+}
+
+.button{
+    -fx-border-radius: 10px;
+    -fx-background-color: #1E1E1E;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #FFFFFF;
+}
+
+.textField{
+    -fx-border-radius: 10px;
+    -fx-border-color: #E0E0E0;
+    -fx-background-radius: 10px;
+}
+
+#createAcc{
+    -fx-padding:0 0 40px 0;
+}
