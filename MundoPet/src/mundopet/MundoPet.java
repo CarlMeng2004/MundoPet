@@ -21,7 +21,7 @@ public class MundoPet extends Application {
             System.out.println("start does start");
             System.out.println(getClass().getResource("/Vistas/LogIn.fxml"));
             FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/Vistas/LogIn.fxml"));
+            loader.setLocation(getClass().getResource("/Vistas/LogIn.fxml"));
 
             System.out.println("it gets here");
           

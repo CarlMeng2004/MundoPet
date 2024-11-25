@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="1024.0" prefWidth="1440.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.RegistrarController">
+<AnchorPane id="AnchorPane" prefHeight="951.0" prefWidth="1441.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.RegistrarController">
     <stylesheets>
         <URL value="@/css/register.css" />
     </stylesheets>
    <children>
-      <AnchorPane id="back" layoutX="679.0" prefHeight="1024.0" prefWidth="762.0" stylesheets="@../css/register.css" />
-      <VBox id="formContainer" alignment="CENTER" prefHeight="1024.0" prefWidth="641.0" stylesheets="@../css/register.css">
+      <AnchorPane id="back" layoutX="679.0" prefHeight="953.0" prefWidth="762.0" stylesheets="@../css/register.css" />
+      <VBox id="formContainer" alignment="CENTER" layoutX="5.0" layoutY="17.0" prefHeight="750.0" prefWidth="652.0" stylesheets="@../css/register.css">
          <children>
             <Label text="Registro">
                <font>
@@ -68,7 +68,12 @@
                   </Label>
                </children>
             </HBox>
-            <Label styleClass="simpleText" stylesheets="@../css/register.css" text="Si estás de acuerdo, ¡bienvenido!" />
+            <Label prefHeight="21.0" prefWidth="220.0" styleClass="simpleText" stylesheets="@../css/register.css" text="Si estás de acuerdo, ¡bienvenido!" />
+            <Label onMouseClicked="#volver" prefHeight="30.0" prefWidth="215.0" text="Volver a iniciar sesión" underline="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </VBox>
    </children>

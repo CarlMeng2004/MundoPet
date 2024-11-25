@@ -5,3 +5,77 @@
 .mainFxmlClass {
 
 }
+
+.button{
+    -fx-border-radius: 10px;
+    -fx-background-color: #1E1E1E;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #FFFFFF;
+}
+
+.boldClass{
+    -fx-font-weight:bold;
+}
+
+.productContainer{
+    -fx-padding: 0 0 10px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 1, 10);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.productDescriptionContainer{
+   -fx-padding: 10px 0 0 0;
+   -fx-pref-height:117px;
+}
+
+.productDescription{
+    -fx-pref-width: 300px;
+    -fx-wrap-text: true;
+    -fx-font-size:16px;
+}
+
+#catalogue{
+    -fx-padding: 0 20px 0 20px;
+}
+
+.productStyle{
+    -fx-background-size: contain;
+    -fx-background-position:center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: white;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+#p1{
+    -fx-background-image: url("../Imagenes/p1.png");   
+}
+
+#p2{
+    -fx-background-image: url("../Imagenes/p2.png");  
+}
+
+#p3{
+    -fx-background-image: url("../Imagenes/p3.png");   
+}
+
+#p4{
+    -fx-background-image: url("../Imagenes/p4.png")
+}
+
+#p5{
+    -fx-background-image: url("../Imagenes/p5.png")
+}
+
+#p6{
+    -fx-background-image: url("../Imagenes/p6.png")
+}
+
+#p7{
+    -fx-background-image: url("../Imagenes/p7.png")
+}
+
+#p8{
+    -fx-background-image: url("../Imagenes/p8.png")
+}

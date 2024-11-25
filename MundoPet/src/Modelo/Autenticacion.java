@@ -22,7 +22,7 @@ public class Autenticacion {
         leerArchivo();
     }
     
-    public boolean Logear(TextField usuario, TextField password){
+    public int Logear(TextField usuario, TextField password){
         leerArchivo();
         String user = usuario.getText();
         String pw = password.getText();
@@ -33,15 +33,17 @@ public class Autenticacion {
             if (list.get(i).usuario.equals(user) && list.get(i).password.equals(pw)) {
                 System.out.println("logeado");
                 usuarioLogeado = list.get(i);
-                return true;
+                return 1;
             } else if (list.get(i).usuario.equals(user) && !(list.get(i).password.equals(pw))){
                 System.out.println("wrong password");
                 usuarioLogeado = null;
-                return false;
+                return 2;
+            } else if (user.equals("admin") && pw.equals("admin")){
+                return 3;
             }
         }
         
-        return false;
+        return 0;
     }
     
     public void registrar(TextField usuario, TextField password, TextField nombre, TextField cedula) {

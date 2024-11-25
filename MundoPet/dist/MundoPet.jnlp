@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="MundoPet.jar" size="4951722" download="eager" />
+    <jar href="MundoPet.jar" size="6370447" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="mundopet.MundoPet"  name="MundoPet" />
   <update check="always"/>
